@@ -1,0 +1,17 @@
+* execute php from curl
+
+** this works
+
+#+BEGIN_SRC sh
+rm -f /tmp/test*
+curl -sS https://raw.githubusercontent.com/TaylorMonacelli/php-practice2/master/t1/test1.php | php
+ls -la /tmp/test*
+#+END_SRC
+
+*** log
+
+#+BEGIN_SRC 
+[demo@demos-MacBook-Pro:t1(master)]$ rm -f /tmp/test*; curl -sS https://raw.githubusercontent.com/TaylorMonacelli/php-practice2/master/t1/test1.php | php; ls -la /tmp/test*
+-rw-r--r--  1 demo  wheel  5 Nov  1 20:41 /tmp/test1.test
+[demo@demos-MacBook-Pro:t1(master)]$ 
+#+END_SRC
